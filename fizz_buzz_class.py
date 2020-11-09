@@ -12,7 +12,7 @@ class FizzBuzz():
         numbers = [] # empty list which we can appent numbers or fizz / buzz to 
         # i think this is better than a list of 1-100 which we then go and replace elements of
 
-        # control flow to check divisibility
+        # control flow to check divisibility and append either Fizz, Buzz, FizzBuzz or the number to a list
         for number in range (self.start, self.end + 1):
             if number % self.buzz == 0 and number % self.fizz == 0:
                 numbers.append('FizzBuzz') 
@@ -22,5 +22,5 @@ class FizzBuzz():
                 numbers.append('Fizz')
             else:
                 numbers.append(number)
-        return number
+        return ' '.join(str(number) for number in numbers) # this returns a string seperated by a space (makes the output pretty)
         
